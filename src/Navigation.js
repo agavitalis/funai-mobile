@@ -13,10 +13,10 @@ const Stack = createStackNavigator();
 export default function AppNavigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Landing" headerMode='none' >
-        <Stack.Screen name="Landing" component={LandingScreen} options={{}} />
-        <Stack.Screen name="Website" component={WebsiteScreen} />
-        <Stack.Screen name="Portal" component={PortalScreen} />
+      <Stack.Navigator initialRouteName="LandingScreen" headerMode='none' >
+        <Stack.Screen name="LandingScreen" component={LandingScreen} options={{}} />
+        <Stack.Screen name="WebsiteScreen" component={WebsiteScreen} />
+        <Stack.Screen name="PortalScreen" component={PortalScreen} />
 
       </Stack.Navigator>
 

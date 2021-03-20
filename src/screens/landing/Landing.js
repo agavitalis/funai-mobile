@@ -22,7 +22,7 @@ class LandingScreen extends React.Component {
     render() {
         return (
           
-            <KeyboardAwareScrollView keyboardShouldPersistTaps={'always'} showVerticalScrollIndicators="false" style={{flex:1}}>
+        <KeyboardAwareScrollView keyboardShouldPersistTaps={'always'} showVerticalScrollIndicators="false" style={{flex:1}}>
             <ImageBackground source={require('../../images/backgroundAuth.png')} style={{ width: '100%', height: '100%' }}>
                 <View style={Styles.container}>
 
@@ -34,23 +34,16 @@ class LandingScreen extends React.Component {
                    
 
                     <View style={Styles.containerButtons}>
-                        <Separator></Separator>
-                        <TouchableOpacity style={[Styles.registerButton]} onPress={() => this.props.navigation.navigate('HomeScreen')} >
+                        <TouchableOpacity style={[Styles.registerButton]} onPress={() => this.props.navigation.navigate('WebsiteScreen')} >
                             <Text style={[Styles.buttonText,Styles.buttonTextSignup]} >Go to School Website</Text>
+                        </TouchableOpacity>
+                        <Separator></Separator>
+                        <TouchableOpacity style={[Styles.registerButton]} onPress={() => this.props.navigation.navigate('PortalScreen')} >
+                            <Text style={[Styles.buttonText,Styles.buttonTextSignup]} >Go to School portal</Text>
                         </TouchableOpacity>
                         
                     </View>
-                    <View style={Styles.containerExternalAuth}>
-                        <TouchableOpacity style={[Styles.externalAuth, Styles.facebookBtn]} onPress={() => Alert.alert('Button with adjusted color pressed')}>
-                            <Text style={[Styles.buttonText,Styles.buttonTextSignup]} >Portal</Text>
-                        </TouchableOpacity>
-                      
-                        <TouchableOpacity style={[Styles.externalAuth, Styles.googleBtn]} onPress={() => Alert.alert('Button with adjusted color pressed')}>
-                            <Text style={[Styles.buttonText,Styles.buttonTextSignup]} >Google</Text>
-                        </TouchableOpacity>
-
-                    </View>
-
+                  
                 </View>
             </ImageBackground>
         </KeyboardAwareScrollView>

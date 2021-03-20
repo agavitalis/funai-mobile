@@ -1,13 +1,11 @@
 import React from 'react';
-import { View, TouchableOpacity, ScrollView, Text, TextInput, ImageBackground, Button, Alert ,KeyboardAvoidingView} from 'react-native';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview'
+import { ActivityIndicator } from 'react-native';
+import { WebView } from 'react-native-webview';
 import Styles from './Portal.styles'
 
-function Separator() {
-    return <View style={Styles.separator} />;
+function LoadingIndicatorView() {
+    return <ActivityIndicator color='#009b88' size='large' />
 }
-
-
 class PortalScreen extends React.Component {
 
     constructor(props) {
@@ -21,46 +19,13 @@ class PortalScreen extends React.Component {
 
     render() {
         return (
-          <KeyboardAwareScrollView keyboardShouldPersistTaps={'always'} showVerticalScrollIndicators="false" style={{flex:1}}>
-                <ImageBackground source={require('../../images/backgroundAuth.png')} style={{ width: '100%', height: '100%' }}>
-                <View style={Styles.container}>
+            
+            <WebView
+                source={{ uri: 'https://portal.funai.edu.ng/login.aspx' }}
+                renderLoading={LoadingIndicatorView}
+                startInLoadingState={true}
+            />
 
-                    <View style={Styles.containerTitle}>
-                        <Text style={Styles.titleSmall}>Welcome to</Text>
-                        <Text style={Styles.titleBig}>ShortStories</Text>
-                    </View>
-
-                    <View style={Styles.containerInput}>
-                        <TextInput
-                            style={Styles.inputText}
-                            placeholder='Email Address'
-                        />
-
-                        <TextInput
-                            style={Styles.inputText}
-                            placeholder='Password'
-                        />
-                    </View>
-
-                    <View style={Styles.containerButtons}>
-                        <TouchableOpacity style={[Styles.loginButton]} onPress={() => Alert.alert('Button with adjusted color pressed')}>
-                            <Text style={[Styles.buttonText,Styles.buttonTextSignup]} >Login</Text>
-                        </TouchableOpacity>
-                        <Separator />
-                        <TouchableOpacity style={[Styles.registerButton]} onPress={() => this.props.navigation.navigate('RegisterScreen')}>
-                            <Text style={Styles.buttonText}>Register</Text>
-                        </TouchableOpacity>
-
-                    </View>
-
-                </View>
-                </ImageBackground>
-              
-              
-
-          </KeyboardAwareScrollView>
-          
-           
         );
     }
 }
