@@ -1,15 +1,14 @@
 import React from 'react';
 import { View, TouchableOpacity, ScrollView, Text, TextInput, ImageBackground, Button, Alert ,KeyboardAvoidingView} from 'react-native';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
-import Styles from './Login.styles'
-import Background from '../../partials/Background'
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview'
+import Styles from './Website.styles'
 
 function Separator() {
     return <View style={Styles.separator} />;
 }
 
 
-class LoginScreen extends React.Component {
+class WebsiteScreen extends React.Component {
 
     constructor(props) {
         super(props);
@@ -66,4 +65,4 @@ class LoginScreen extends React.Component {
     }
 }
 
-export default LoginScreen
+export default WebsiteScreen
