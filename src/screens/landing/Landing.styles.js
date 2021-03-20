@@ -1,16 +1,16 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const Styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding:15,
-        width:'100%',
-        minHeight:650,
-        maxHeight:800
+        //padding:15,
+        width: '100%',
+        minHeight: 650,
+        maxHeight: 800
     },
     containerTitle: {
         flex: 1,
-        marginTop:40,
+        marginTop: 40,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -24,10 +24,10 @@ const Styles = StyleSheet.create({
         lineHeight: 50,
     },
 
-    titleSmall:{
-    color: '#000',
-    fontWeight: 'bold',
-    fontSize: 20,
+    titleSmall: {
+        color: '#000',
+        fontWeight: 'bold',
+        fontSize: 20,
     },
 
     containerInput: {
@@ -37,12 +37,12 @@ const Styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-    inputText:{
+    inputText: {
         height: 45,
         width: 270,
-        backgroundColor:'#fff',
-        marginTop:20,
-        padding:10
+        backgroundColor: '#fff',
+        marginTop: 20,
+        padding: 10
     },
 
     containerButtons: {
@@ -51,31 +51,14 @@ const Styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-    containerExternalAuth:{
+    containerExternalAuth: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection:'row'
+        flexDirection: 'row'
     },
 
-    registerButton: {
-        backgroundColor: "#DEDEDE",
-        borderRadius: 10,
-        width: 200,
-        height: 45,
-        justifyContent: 'center',
-    },
-
-    externalAuth: {
-        backgroundColor: "#DEDEDE",
-        borderRadius: 10,
-        width: 120,
-        height: 45,
-        margin:10,
-        justifyContent: 'center',
-    },
-
-    buttonText:{
+    buttonText: {
         fontFamily: 'Roboto',
         fontStyle: 'normal',
         fontWeight: 'bold',
@@ -83,7 +66,7 @@ const Styles = StyleSheet.create({
         lineHeight: 19,
         textAlign: 'center',
     },
-    buttonTextSignup:{
+    buttonTextSignup: {
         color: '#fff',
     },
 
@@ -91,13 +74,21 @@ const Styles = StyleSheet.create({
         marginVertical: 15,
         borderBottomColor: '#737373',
         borderWidth: 1,
-        width:250
+        width: 250
     },
-    facebookBtn:{
-        backgroundColor: '#4E5FFF'
+    websiteBtn: {
+        backgroundColor: "#FF5757",
+        borderRadius: 10,
+        width: 200,
+        height: 45,
+        justifyContent: 'center',
     },
-    googleBtn:{
-        backgroundColor: '#FF5757',
+    portalBtn: {
+        backgroundColor: '#4E5FFF',
+        borderRadius: 10,
+        width: 200,
+        height: 45,
+        justifyContent: 'center',
     }
 
 
