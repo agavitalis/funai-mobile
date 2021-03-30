@@ -25,7 +25,7 @@ class LandingScreen extends React.Component {
 
                     <View style={Styles.containerTitle}>
                         <Text style={Styles.titleSmall}>Welcome to</Text>
-                        <Text style={Styles.titleBig}>FUNIA</Text>
+                        <Text style={Styles.titleBig}>FUNAI</Text>
                     </View>
 
                     <View style={Styles.containerButtons}>
